@@ -146,9 +146,13 @@
 
 
 
+
+
 <section id="avisos" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="mb-4 text-primary">Avisos importantes</h2>
+  <div class="container text-center">
+    <h2 id="avisos-title" class="mb-4 text-danger fw-bold">
+      Avisos importantes
+    </h2>
     <ul class="list-group">
       <li class="list-group-item">El hospital permanecerá cerrado el 10 de septiembre por feriado provincial.</li>
       <li class="list-group-item">Nueva campaña de vacunación antigripal desde el 15 de octubre.</li>
@@ -157,6 +161,14 @@
   </div>
 </section>
 
+<script>
+  // Intermitencia del título
+  const aviso = document.getElementById("avisos-title");
+  setInterval(() => {
+    aviso.style.visibility =
+      aviso.style.visibility === "hidden" ? "visible" : "hidden";
+  }, 800); // cada 800ms cambia
+</script>
 
 
 
@@ -557,5 +569,6 @@ La obra, gestionada por nuestra directora Dra. Lisandra Ortellado.</p>
   </script>
 </body>
 </html>
+
 
 
